@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { Calendar, Users, Award, Book, Activity, MapPin } from "lucide-react";
+import { Calendar, Users, Award, Book, Activity} from "lucide-react";
 import Link from "next/link";
 import UpcomingEvents from "@/components/UpcomingEvents";
 
 const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [showAllEvents, setShowAllEvents] = useState(false);
+  // const [showAllEvents, setShowAllEvents] = useState(false);
   const [emailStatus, setEmailStatus] = useState<string | null>(null);
   
   // Array of background images
