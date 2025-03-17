@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Calendar, Users, Award, Book, Activity} from "lucide-react";
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [backgroundImages.length]);
 
   // Improved handleSubmit function
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,6 +56,7 @@ const Home: React.FC = () => {
         setEmailStatus(null);
       }, 5000);
     } catch (error) {
+      console.log(error);
       setEmailStatus("Unable to open email client. Please email us directly at ieeeaamu1875@gmail.com");
       
       // Clear the error message after 5 seconds
@@ -148,7 +149,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <img src="/images/workshops.jpg" alt="Technical Workshops" className="w-full h-full object-cover" />
+                <Image src="/images/workshops.jpg" alt="Technical Workshops" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Technical Workshops</h3>
@@ -160,7 +161,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <img src="/images/handshake.jpg" alt="Opportunity Forum" className="w-full h-full object-cover" />
+                <Image src="/images/handshake.jpg" alt="Opportunity Forum" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Opportunity Forum</h3>
@@ -173,7 +174,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <img src="/images/competition.jpg" alt="Competitions & Hackathons" className="w-full h-full object-cover" />
+                <Image src="/images/competition.jpg" alt="Competitions & Hackathons" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Competitions & Hackathons</h3>
@@ -185,7 +186,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <img src="/images/careerdev.jpg" alt="Professional Development" className="w-full h-full object-cover" />
+                <Image src="/images/careerdev.jpg" alt="Professional Development" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Professional Development</h3>
@@ -212,7 +213,7 @@ const Home: React.FC = () => {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="/api/placeholder/300/300" alt="President" className="w-full h-full object-cover" />
+                <Image src="/api/placeholder/300/300" alt="President" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Daniel Lambo</h3>
@@ -223,7 +224,7 @@ const Home: React.FC = () => {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="/images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover" />
+                <Image src="/images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">John Adeyemo</h3>
@@ -233,7 +234,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="images/sudeep_hs.jpeg" alt="Secretary" className="w-full h-full object-cover" />
+                <Image src="images/sudeep_hs.jpeg" alt="Secretary" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Sudeep Joshi</h3>
@@ -243,7 +244,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="images/mauyon_hs.jpg" alt="Historian" className="w-full h-full object-cover" />
+                <Image src="images/mauyon_hs.jpg" alt="Historian" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Mauyon Wusu</h3>
@@ -253,7 +254,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="images/ruva_hs.JPG" alt="Treasurer" className="w-full h-full object-cover" />
+                <Image src="images/ruva_hs.JPG" alt="Treasurer" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Ruvarashe</h3>
@@ -263,7 +264,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="/api/placeholder/300/300" alt="Operational Manager" className="w-full h-full object-cover" />
+                <Image src="/api/placeholder/300/300" alt="Operational Manager" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Ogheneobukome Ejaife</h3>
@@ -273,7 +274,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="/images/sunday_hs.jpg" alt="Technical Manager" className="w-full h-full object-cover" />
+                <Image src="/images/sunday_hs.jpg" alt="Technical Manager" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Sunday Ochigbo</h3>
@@ -283,7 +284,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <img src="/api/placeholder/300/300" alt="Faculty Advisor" className="w-full h-full object-cover" />
+                <Image src="/api/placeholder/300/300" alt="Faculty Advisor" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Dr. Raziq Yaqub</h3>
@@ -294,84 +295,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Leadership Section
-        <section id="team" className="mb-10">
-          <h2 className="text-maroon-700 text-3xl font-semibold mb-6 text-center">Meet Our Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="President" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Daniel Lambo</h3>
-                <p className="text-maroon-700">President</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">John Adeyemo</h3>
-                <p className="text-maroon-700">Vice President</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Secretary" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Sudeep Joshi</h3>
-                <p className="text-maroon-700">Secretary</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Social Media" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Mauyon Wusu</h3>
-                <p className="text-maroon-700">Historian</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Treasurer" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Ruvarashe</h3>
-                <p className="text-maroon-700">Treasurer</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Work" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Ogheneobukome Ejaife</h3>
-                <p className="text-maroon-700">Operational Manager</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Work" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Sunday Ochigbo</h3>
-                <p className="text-maroon-700">Technical Manager</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
-              <div className="h-48 bg-gray-300">
-                <img src="/api/placeholder/300/300" alt="Work" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Dr. Raziq Yaqub</h3>
-                <p className="text-maroon-700">Faculty Advisor</p>
-              </div>
-            </div>
-          </div>
-        </section> */}
 
         {/* Contact/Join Section */}
         <section id="contact" className="bg-maroon-700 text-white rounded-lg shadow-lg p-8">
@@ -443,7 +366,7 @@ const Home: React.FC = () => {
               <p>Alabama A&M University</p>
               <p>4900 Meridian St N, Huntsville, AL 35811</p>
               <div style={{ width: '100px', height: '100px', overflow: 'hidden' }}>
-  <img src="/images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  <Image src="/images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 </div>            </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Connect With Us</h3>
