@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import img from "next/image";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Calendar, Users, Award, Book, Activity} from "lucide-react";
@@ -13,9 +13,9 @@ const Home: React.FC = () => {
   
   // Array of background images
   const backgroundImages = [
-    '/images/home-pic.png',
-    '/images/backgroundphoto.jpeg',
-    '/images/ETB.jpeg',
+    'images/home-pic.png',
+    'images/backgroundphoto.jpeg',
+    'images/ETB.jpeg',
   ];
 
   useEffect(() => {
@@ -149,7 +149,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <Image src="/images/workshops.jpg" alt="Technical Workshops" className="w-full h-full object-cover" />
+                <img src="images/workshops.jpg" alt="Technical Workshops" className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Technical Workshops</h3>
@@ -161,7 +161,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <Image src="/images/handshake.jpg" alt="Opportunity Forum" className="w-full h-full object-cover" />
+                <img src="images/handshake.jpg" alt="Opportunity Forum" className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Opportunity Forum</h3>
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <Image src="/images/competition.jpg" alt="Competitions & Hackathons" className="w-full h-full object-cover" />
+                <img src="images/competition.jpg" alt="Competitions & Hackathons" className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Competitions & Hackathons</h3>
@@ -186,7 +186,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-300">
-                <Image src="/images/careerdev.jpg" alt="Professional Development" className="w-full h-full object-cover" />
+                <img src="images/careerdev.jpg" alt="Professional Development" className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800">Professional Development</h3>
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="/api/placeholder/300/300" alt="President" className="w-full h-full object-cover" />
+                <img src="images/daniel_hs.jpeg" alt="President" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Daniel Lambo</h3>
@@ -224,7 +224,7 @@ const Home: React.FC = () => {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="/images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover" />
+                <img src="images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">John Adeyemo</h3>
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="images/sudeep_hs.jpeg" alt="Secretary" className="w-full h-full object-cover" />
+                <img src="images/sudeep_hs.jpeg" alt="Secretary" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Sudeep Joshi</h3>
@@ -244,7 +244,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="images/mauyon_hs.jpg" alt="Historian" className="w-full h-full object-cover" />
+                <img src="images/mauyon_hs.jpg" alt="Historian" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Mauyon Wusu</h3>
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="images/ruva_hs.JPG" alt="Treasurer" className="w-full h-full object-cover" />
+                <img src="images/ruva_hs.JPG" alt="Treasurer" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Ruvarashe</h3>
@@ -264,7 +264,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="/api/placeholder/300/300" alt="Operational Manager" className="w-full h-full object-cover" />
+                <img src="images/obukome_hs.jpg" alt="Operational Manager" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Ogheneobukome Ejaife</h3>
@@ -274,7 +274,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="/images/sunday_hs.jpg" alt="Technical Manager" className="w-full h-full object-cover" />
+                <img src="images/sunday_hs.jpg" alt="Technical Manager" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Sunday Ochigbo</h3>
@@ -284,7 +284,7 @@ const Home: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                <Image src="/api/placeholder/300/300" alt="Faculty Advisor" className="w-full h-full object-cover" />
+                <img src="images/dr_yaqub.jpg" alt="Faculty Advisor" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">Dr. Raziq Yaqub</h3>
@@ -366,7 +366,7 @@ const Home: React.FC = () => {
               <p>Alabama A&M University</p>
               <p>4900 Meridian St N, Huntsville, AL 35811</p>
               <div style={{ width: '100px', height: '100px', overflow: 'hidden' }}>
-  <Image src="/images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+  <img src="images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }}/>
 </div>            </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Connect With Us</h3>

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   basePath: '',
   assetPrefix: '', 
   images: {
+    unoptimized:true,
     loader: 'imgix',
     path: '',
   },

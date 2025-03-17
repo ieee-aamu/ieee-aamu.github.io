@@ -2,7 +2,7 @@
  import { useState } from "react";
  import { Menu, X } from "lucide-react"; // Icons for hamburger menu
  import Link from "next/link";
- import Image from "next/image";
+//  import Image from "next/image";
  
  const Navbar: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@
            {/* Space to the left of the logo */}
            <div className="ml-4">
              {/* Logo Image */}
-             <Image
+             <img
                src="/images/ieee-aamu-logo.png"
                alt="IEEE AAMU"
                className="h-10"
