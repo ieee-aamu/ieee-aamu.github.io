@@ -257,7 +257,7 @@ const Home: React.FC = () => {
                 <img src="images/ruva_hs.JPG" alt="Treasurer" className="w-full h-full object-cover"/>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800">Ruvarashe</h3>
+                <h3 className="text-lg font-bold text-gray-800">Ruvarashe Nyabando</h3>
                 <p className="text-maroon-700">Treasurer</p>
               </div>
             </div>
