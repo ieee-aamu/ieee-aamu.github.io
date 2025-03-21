@@ -283,7 +283,7 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
                <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
-                 <img src="/images/kelvin_hs.jpeg" alt="Membership coordinator" className="w-full h-full object-cover" />
+                 <img src="/images/Kelvin Perkins' Headshot.jpeg" alt="Membership coordinator" className="w-full h-full object-cover" />
                </div>
                <div className="p-4">
                  <h3 className="text-lg font-bold text-gray-800">Kelvin Perkins</h3>
