@@ -281,6 +281,24 @@ const Home: React.FC = () => {
                 <p className="text-maroon-700">Technical Manager</p>
               </div>
             </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
+               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
+                 <img src="/images/kelvin_hs.jpeg" alt="Membership coordinator" className="w-full h-full object-cover" />
+               </div>
+               <div className="p-4">
+                 <h3 className="text-lg font-bold text-gray-800">Kelvin Perkins</h3>
+                 <p className="text-maroon-700">Membership Coordinator</p>
+               </div>
+             </div>
+             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
+               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
+                 <img src="/images/Haroon.png" alt="GA Assistant" className="w-full h-full object-cover" />
+               </div>
+               <div className="p-4">
+                 <h3 className="text-lg font-bold text-gray-800">Haroon Tabassum</h3>
+                 <p className="text-maroon-700">Graduate Student Assistant</p>
+               </div>
+             </div>
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
