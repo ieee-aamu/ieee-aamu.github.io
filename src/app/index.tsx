@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import { Calendar, Users, Award, Book, Activity} from "lucide-react";
 import Link from "next/link";
 import UpcomingEvents from "@/components/UpcomingEvents";
+import ProgramsSection from "@/components/ProgramsSection";
 
 const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -143,7 +144,53 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Programs and Upcoming Events Section */}
+      <section id="events">
+        <ProgramsSection />
+      </section>
+
+{/* Programs and Upcoming Events Section 
+  <section id="events" className="mb-10 text-center">
+  <h2 className="text-maroon-700 text-3xl font-semibold mb-6">Our Programs</h2>
+
+ Buttons for Program Pages 
+  <div className="flex justify-center space-x-6">
+    <a
+      href="/workshops"
+      className="w-36 h-36 flex items-center justify-center rounded-lg 
+                 bg-white border-[5px] border-gradient-maroon 
+                 text-maroon-800 font-semibold text-lg shadow-inner 
+                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
+                 hover:scale-105"
+    >
+      Workshops
+    </a>
+
+    <a
+      href="/forum"
+      className="w-36 h-36 flex items-center justify-center rounded-lg 
+                 bg-white border-[5px] border-gradient-maroon 
+                 text-maroon-800 font-semibold text-lg shadow-inner 
+                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
+                 hover:scale-105"
+    >
+      Forum
+    </a>
+
+    <a
+      href="/hackathons"
+      className="w-36 h-36 flex items-center justify-center rounded-lg 
+                 bg-white border-[5px] border-gradient-maroon 
+                 text-maroon-800 font-semibold text-lg shadow-inner 
+                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
+                 hover:scale-105"
+    >
+      Hackathons
+    </a>
+  </div>
+</section> */}
+
+{/* old programs section */}
+        {/* Programs and Upcoming Events Section
         <section id="events" className="mb-10">
           <h2 className="text-maroon-700 text-3xl font-semibold mb-6">Our Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -197,7 +244,7 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
 
             
