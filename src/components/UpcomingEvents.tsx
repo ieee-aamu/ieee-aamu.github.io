@@ -5,13 +5,13 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 const upcomingEvents = [
   {
     date: "20250320",
-    displayDate: "March 20, 2025",
-    startTime: "12:00 PM",
-    endTime: "1:00 PM",
+    displayDate: "March 27, 2025",
+    startTime: "5:00 PM",
+    endTime: "6:30 PM",
     startDateTime: "20250320T120000",
     endDateTime: "20250320T130000",
     location: "Engineering Building, Room TPA",
-    title: "Introduction to IEEE Open Space Projects",
+    title: "IEEE Open Space Projects Lecture 2",
     description: "Learn the fundamentals of embedded programming using Arduino."
   },
   {
@@ -27,7 +27,7 @@ const upcomingEvents = [
   },
   {
     date: "20250401/20250430",
-    displayDate: "April, 2025",
+    displayDate: "April 12, 2025",
     startTime: "All Day",
     endTime: "All Day",
     startDateTime: "20250401T000000",
