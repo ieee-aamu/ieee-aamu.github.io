@@ -131,7 +131,7 @@ export default function ProgramsSection() {
       title: "IEEE SoutheastCon",
       description:
         "Our flagship conference where students participate in technical paper competitions, hackathons, and networking events.",
-      images: ["images/southeastcon1.jpg", "images/southeastcon2.jpg"],
+      images: ["images/sec/sec1.jpg", "images/sec/sec2.jpg", "images/sec/sec3.jpg", "images/sec/sec4.jpg", "images/sec/sec5.jpg"],
       icon: <Users className="w-6 h-6 text-maroon-600" />, // Icon for SoutheastCon
     },
     gbm: {
@@ -152,7 +152,7 @@ export default function ProgramsSection() {
       title: "Networking",
       description:
         "Build connections with peers, alumni, and industry professionals through IEEE networking events and socials.",
-      images: ["images/net/networking1.jpg", "images/net/networking2.jpg", "images/net/networking3.jpg", "images/net/networking4.jpg", "images/net/networking5.jpg"],
+      images: ["images/net/networking1.jpg", "images/net/networking2.jpg"],
       icon: <Network className="w-6 h-6 text-maroon-600" />, // Icon for Networking
     },
   };
