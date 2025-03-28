@@ -306,7 +306,7 @@ const Home: React.FC = () => {
         },
         { 
           icon: '🚀', 
-          title: 'Career Growth', 
+          title: 'Professional Growth', 
           text: 'Access exclusive jobs, mentorships, and leadership opportunities' 
         },
         { 
