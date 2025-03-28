@@ -137,7 +137,7 @@ export default function ProgramsSection() {
     gbm: {
       title: "General Body Meeting",
       description:
-        "Our General Body Meeting (GBM) is held every semester to update members on IEEE activities, upcoming events, and opportunities for involvement. It’s a chance to connect with peers, learn about technical projects, and explore leadership roles within IEEE.",
+        "Our General Body Meeting (GBM) is held every three weeks to update members on IEEE activities, upcoming events, and opportunities for involvement. It’s a chance to connect with peers, learn about technical projects, and explore leadership roles within IEEE.",
       images: ["images/gbm/gbm1.jpg", "images/gbm/gbm2.jpg","images/gbm/gbm3.jpg","images/gbm/gbm4.jpg","images/gbm/gbm5.jpg","images/gbm/gbm6.jpg"],
       icon: <Briefcase className="w-6 h-6 text-maroon-600" />, // Icon for GBM
     },

@@ -4,14 +4,25 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 
 const upcomingEvents = [
   {
-    date: "20250320",
-    displayDate: "March 27, 2025",
+    date: "20250327/20250330",
+    displayDate: "March 27-30, 2025",
+    startTime: "All Day",
+    endTime: "All Day",
+    startDateTime: "20250327T000000",
+    endDateTime: "20250330T235959",
+    location: "Embassy Suites Concord (Charlotte), NC",
+    title: "IEEE Regional Conference (South East Con 2025)",
+    description: "Attend the regional conference and network with IEEE members from across the region."
+  },
+  {
+    date: "20250403",
+    displayDate: "April 3, 2025",
     startTime: "5:00 PM",
     endTime: "6:30 PM",
     startDateTime: "20250320T120000",
     endDateTime: "20250320T130000",
-    location: "Engineering Building, Room TPA",
-    title: "IEEE Open Space Projects Lecture 2",
+    location: "Engineering Building, Room 142",
+    title: "IEEE Open Space Projects Lecture 3",
     description: "Learn the fundamentals of embedded programming using Arduino."
   },
   {
@@ -47,17 +58,7 @@ const upcomingEvents = [
     title: "IEEE Trivia Night",
     description: "IEEE trivia night with prizes for the best answers."
   },
-  {
-    date: "20250327/20250330",
-    displayDate: "March 27-30, 2025",
-    startTime: "All Day",
-    endTime: "All Day",
-    startDateTime: "20250327T000000",
-    endDateTime: "20250330T235959",
-    location: "Embassy Suites Concord (Charlotte), NC",
-    title: "IEEE Regional Conference (South East Con 2025)",
-    description: "Attend the regional conference and network with IEEE members from across the region."
-  }
+
 ];
   // Toggle event view function
 
