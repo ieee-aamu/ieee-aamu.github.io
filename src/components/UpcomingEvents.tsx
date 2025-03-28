@@ -79,6 +79,7 @@ const UpcomingEvents = () => {
           {showAllEvents ? "View Less" : "View More"}
         </button>
       </div>
+
       <div className="space-y-6">
         {displayedEvents.map((event, index) => (
           <div key={index} className="border-l-4 border-maroon-700 pl-4 flex justify-between items-start">

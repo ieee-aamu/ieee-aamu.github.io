@@ -1,22 +1,25 @@
 "use client";
-// import img from "next/image";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { Calendar, Users, Award, Book, Activity} from "lucide-react";
+import { Calendar, Users, Award, Book, Activity, X } from "lucide-react";
 import Link from "next/link";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import ProgramsSection from "@/components/ProgramsSection";
 
 const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const [showAllEvents, setShowAllEvents] = useState(false);
   const [emailStatus, setEmailStatus] = useState<string | null>(null);
+  
+  // New state for flier modal
+  const [showFlier, setShowFlier] = useState(true);
   
   // Array of background images
   const backgroundImages = [
     'images/home-pic.png',
     'images/backgroundphoto.jpeg',
     'images/ETB.jpeg',
+    'images/ethicscomp.jpg',
+    'images/daniellambo.jpg',
   ];
 
   useEffect(() => {
@@ -27,6 +30,29 @@ const Home: React.FC = () => {
     
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
+
+  // Flier Modal Component
+  const FlierModal = () => {
+    if (!showFlier) return null;
+
+return (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="relative max-w-4xl w-full max-h-[90vh] overflow-hidden">
+      <button 
+        onClick={() => setShowFlier(false)}
+        className="absolute top-2 right-2 z-60 bg-white rounded-full p-2 hover:bg-gray-100 transition"
+      >
+        <X className="h-6 w-6 text-black" />
+      </button>
+      <img 
+        src="images/flier.jpg" 
+        alt="IEEE AAMU Flier" 
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
+  </div>
+);}
+
 
   // Improved handleSubmit function
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -69,6 +95,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Flier Modal */}
+      <FlierModal />
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -144,114 +173,11 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-      <section id="events">
-        <ProgramsSection />
-      </section>
-
-{/* Programs and Upcoming Events Section 
-  <section id="events" className="mb-10 text-center">
-  <h2 className="text-maroon-700 text-3xl font-semibold mb-6">Our Programs</h2>
-
- Buttons for Program Pages 
-  <div className="flex justify-center space-x-6">
-    <a
-      href="/workshops"
-      className="w-36 h-36 flex items-center justify-center rounded-lg 
-                 bg-white border-[5px] border-gradient-maroon 
-                 text-maroon-800 font-semibold text-lg shadow-inner 
-                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
-                 hover:scale-105"
-    >
-      Workshops
-    </a>
-
-    <a
-      href="/forum"
-      className="w-36 h-36 flex items-center justify-center rounded-lg 
-                 bg-white border-[5px] border-gradient-maroon 
-                 text-maroon-800 font-semibold text-lg shadow-inner 
-                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
-                 hover:scale-105"
-    >
-      Forum
-    </a>
-
-    <a
-      href="/hackathons"
-      className="w-36 h-36 flex items-center justify-center rounded-lg 
-                 bg-white border-[5px] border-gradient-maroon 
-                 text-maroon-800 font-semibold text-lg shadow-inner 
-                 transition-all duration-300 hover:shadow-[0_0_20px_4px_rgba(128,0,0,0.8)] 
-                 hover:scale-105"
-    >
-      Hackathons
-    </a>
-  </div>
-</section> */}
-
-{/* old programs section */}
-        {/* Programs and Upcoming Events Section
-        <section id="events" className="mb-10">
-          <h2 className="text-maroon-700 text-3xl font-semibold mb-6">Our Programs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300">
-                <img src="images/workshops.jpg" alt="Technical Workshops" className="w-full h-full object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">Technical Workshops</h3>
-                <p className="mt-2 text-gray-600">
-                  Hands-on sessions on cutting-edge technologies including IoT, machine learning, 
-                  robotics, and more. Our workshops provide practical skills that complement classroom learning.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300">
-                <img src="images/handshake.jpg" alt="Opportunity Forum" className="w-full h-full object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">Opportunity Forum</h3>
-                <p className="mt-2 text-gray-600">
-                  Want to land your dream job, opportunity, or internship? Join our GroupMe opportunity forum! 
-                  We share exclusive openings and resources to help you succeed. 
-                  Get access by emailing us at ieeeaamu1875@gmail.com.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300">
-                <img src="images/competition.jpg" alt="Competitions & Hackathons" className="w-full h-full object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">Competitions & Hackathons</h3>
-                <p className="mt-2 text-gray-600">
-                  We believe in your success! Join our community to learn about competitions, hackathons,
-                  and other opportunities to represent AAMU and IEEE.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300">
-                <img src="images/careerdev.jpg" alt="Professional Development" className="w-full h-full object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">Professional Development</h3>
-                <p className="mt-2 text-gray-600">
-                  Resume building workshops, mock interviews, and networking events with industry professionals.
-                  We help prepare our members for internships and full-time positions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-
-            
-        {/* Upcoming Events Section */}
+        <section id="events">
+          <ProgramsSection />
+        </section>
 
         <UpcomingEvents />
-
 
         {/* Leadership Section */}
         <section id="team" className="mb-10">
@@ -268,7 +194,6 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-            
             <div className="bg-white rounded-lg shadow-md overflow-hidden text-center">
               <div className="h-40 w-40 mx-auto overflow-hidden rounded-lg">
                 <img src="images/john_hs.JPG" alt="Vice President" className="w-full h-full object-cover"/>
@@ -360,7 +285,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-
         {/* Contact/Join Section */}
         <section id="contact" className="bg-maroon-700 text-white rounded-lg shadow-lg p-8">
           <div className="md:flex md:items-center md:justify-between">
@@ -431,8 +355,9 @@ const Home: React.FC = () => {
               <p>Alabama A&M University</p>
               <p>4900 Meridian St N, Huntsville, AL 35811</p>
               <div style={{ width: '100px', height: '100px', overflow: 'hidden' }}>
-  <img src="images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }}/>
-</div>            </div>
+                <img src="images/logo.png" alt="logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }}/>
+              </div>
+            </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Connect With Us</h3>
               <div className="flex space-x-4">
