@@ -16,7 +16,7 @@
            <div className="ml-4">
              {/* Logo Image */}
              <img
-               src="images/ieee-aamu-logo.png"
+               src="images/logo2.png"
                alt="IEEE AAMU"
                className="h-10"
              />
