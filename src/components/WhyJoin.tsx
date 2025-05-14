@@ -1,10 +1,33 @@
 import React from "react";
 
 export default function WhyJoin() {
+  const benefits = [
+    {
+      icon: "🌐",
+      title: "Global Network",
+      text: "Connect with 400,000+ professionals across 160 countries",
+    },
+    {
+      icon: "🚀",
+      title: "Professional Growth",
+      text: "Access exclusive jobs, memberships, and leadership opportunities",
+    },
+    {
+      icon: "📚",
+      title: "Premium Resources",
+      text: "Get free access to IEEE Xplore® and 5 million+ publications",
+    },
+    {
+      icon: "💡",
+      title: "Local Community",
+      text: "Participate in AAMU workshops, hackathons, and networking events",
+    },
+  ];
+
   return (
     <section
       id="why-join"
-      className="bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-gray-50 to-white mb-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -19,37 +42,18 @@ export default function WhyJoin() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {[
-            {
-              icon: "🌐",
-              title: "Global Network",
-              text: "Connect with 400,000+ professionals across 160 countries",
-            },
-            {
-              icon: "🚀",
-              title: "Professional Growth",
-              text: "Access exclusive jobs, mentorships, and leadership opportunities",
-            },
-            {
-              icon: "📚",
-              title: "Premium Resources",
-              text: "Get free access to IEEE Xplore® and 5 million+ publications",
-            },
-            {
-              icon: "💡",
-              title: "Local Community",
-              text: "Participate in AAMU workshops, hackathons, and networking events",
-            },
-          ].map((item, index) => (
+          {benefits.map((benefit, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="text-4xl mb-4 text-maroon-700">{item.icon}</div>
+              <div className="text-4xl mb-4 text-maroon-700">
+                {benefit.icon}
+              </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-maroon-700 transition-colors">
-                {item.title}
+                {benefit.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{item.text}</p>
+              <p className="text-gray-600 leading-relaxed">{benefit.text}</p>
             </div>
           ))}
         </div>

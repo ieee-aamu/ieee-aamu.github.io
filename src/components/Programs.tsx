@@ -15,10 +15,10 @@ export default function Programs() {
       description:
         "Our 3D Printing Workshop provided participants with hands-on experience in 3D modeling, slicing, and printing. The session introduced attendees to the fundamentals of additive manufacturing, covering both the theoretical and practical aspects of 3D printing technology.",
       images: [
-        "images/3dprint/3dprint1.jpg",
-        "images/3dprint/3dprint2.jpg",
-        "images/3dprint/3dprint3.jpg",
-        "images/3dprint/3dprint4.jpg",
+        "/images/3dprint/3dprint1.jpg",
+        "/images/3dprint/3dprint2.jpg",
+        "/images/3dprint/3dprint3.jpg",
+        "/images/3dprint/3dprint4.jpg",
       ],
       icon: <Package className="w-6 h-6 text-maroon-600" />, // Icon for 3D Printing
     },
@@ -27,11 +27,11 @@ export default function Programs() {
       description:
         "The Open Project Space Program brings IEEE at UCLA’s successful hardware engineering curriculum to AAMU. Through structured lectures, hands-on projects, and expert mentorship, OPS empowers student organizations to build and sustain impactful engineering programs. With resources for budgeting, event planning, and recruitment, OPS provides everything needed to foster innovation and technical growth",
       images: [
-        "images/ops/ops1.jpg",
-        "images/ops/ops2.jpg",
-        "images/ops/ops3.jpg",
-        "images/ops/ops4.jpg",
-        "images/ops/ops5.jpg",
+        "/images/ops/ops1.jpg",
+        "/images/ops/ops2.jpg",
+        "/images/ops/ops3.jpg",
+        "/images/ops/ops4.jpg",
+        "/images/ops/ops5.jpg",
       ],
       icon: <Share className="w-6 h-6 text-maroon-600" />, // Icon for OPS Project
     },
@@ -40,11 +40,11 @@ export default function Programs() {
       description:
         "Our flagship conference where students participate in technical paper competitions, hackathons, and networking events.",
       images: [
-        "images/sec/sec1.jpg",
-        "images/sec/sec2.jpg",
-        "images/sec/sec3.jpg",
-        "images/sec/sec4.jpg",
-        "images/sec/sec5.jpg",
+        "/images/sec/sec1.jpg",
+        "/images/sec/sec2.jpg",
+        "/images/sec/sec3.jpg",
+        "/images/sec/sec4.jpg",
+        "/images/sec/sec5.jpg",
       ],
       icon: <Users className="w-6 h-6 text-maroon-600" />, // Icon for SoutheastCon
     },
@@ -53,12 +53,12 @@ export default function Programs() {
       description:
         "Our General Body Meeting (GBM) is held every three weeks to update members on IEEE activities, upcoming events, and opportunities for involvement. It’s a chance to connect with peers, learn about technical projects, and explore leadership roles within IEEE.",
       images: [
-        "images/gbm/gbm1.jpg",
-        "images/gbm/gbm2.jpg",
-        "images/gbm/gbm3.jpg",
-        "images/gbm/gbm4.jpg",
-        "images/gbm/gbm5.jpg",
-        "images/gbm/gbm6.jpg",
+        "/images/gbm/gbm1.jpg",
+        "/images/gbm/gbm2.jpg",
+        "/images/gbm/gbm3.jpg",
+        "/images/gbm/gbm4.jpg",
+        "/images/gbm/gbm5.jpg",
+        "/images/gbm/gbm6.jpg",
       ],
       icon: <Briefcase className="w-6 h-6 text-maroon-600" />, // Icon for GBM
     },
@@ -67,12 +67,12 @@ export default function Programs() {
       description:
         "Connect with professionals from top companies, attend guest lectures, and explore career opportunities.",
       images: [
-        "images/industry/industry1.jpg",
-        "images/industry/industry2.jpg",
-        "images/industry/industry3.jpg",
-        "images/industry/industry4.jpg",
-        "images/industry/industry5.jpg",
-        "images/industry/industry6.jpg",
+        "/images/industry/industry1.jpg",
+        "/images/industry/industry2.jpg",
+        "/images/industry/industry3.jpg",
+        "/images/industry/industry4.jpg",
+        "/images/industry/industry5.jpg",
+        "/images/industry/industry6.jpg",
       ],
       icon: <Briefcase className="w-6 h-6 text-maroon-600" />, // Icon for Industry Engagement
     },
@@ -80,7 +80,7 @@ export default function Programs() {
       title: "Networking",
       description:
         "Build connections with peers, alumni, and industry professionals through IEEE networking events and socials.",
-      images: ["images/net/networking1.jpg", "images/net/networking2.jpg"],
+      images: ["/images/net/networking1.jpg", "/images/net/networking2.jpg"],
       icon: <Network className="w-6 h-6 text-maroon-600" />, // Icon for Networking
     },
   };
@@ -108,7 +108,7 @@ export default function Programs() {
   };
 
   return (
-    <section id="events" className="mb-16 text-center">
+    <section id="events" className="mb-20 text-center">
       <h2 className="text-maroon-700 text-3xl font-semibold mb-6">
         Our Programs
       </h2>
@@ -140,7 +140,7 @@ export default function Programs() {
           aria-modal="true"
         >
           <div className="w-full h-full grid items-center overflow-y-auto p-5">
-            <div className="bg-white p-6 rounded-lg shadow-2xl w-1/2 mx-auto relative">
+            <div className="bg-white p-6 rounded-lg shadow-2xl max-w-3xl mx-auto relative">
               <button
                 className="absolute top-2 right-2 text-gray-600 hover:text-red-500"
                 onClick={() => setActiveProgram(null)}

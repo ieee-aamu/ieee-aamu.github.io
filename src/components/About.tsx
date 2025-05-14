@@ -3,7 +3,7 @@ import { Calendar, Users, Award } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="mb-16">
+    <section className="mb-20">
       <h2 className="text-maroon-700 text-3xl font-semibold mb-6 text-center">
         About IEEE AAMU
       </h2>
