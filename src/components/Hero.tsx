@@ -7,11 +7,11 @@ export default function Hero() {
 
   // Array of background images
   const backgroundImages = [
-    "images/home-pic.png",
-    "images/backgroundphoto.jpeg",
-    "images/ETB.jpeg",
-    "images/ethicscomp.jpg",
-    "images/daniellambo.jpg",
+    "/images/home-pic.png",
+    "/images/backgroundphoto.jpeg",
+    "/images/ETB.jpeg",
+    "/images/ethicscomp.jpg",
+    "/images/daniellambo.jpg",
   ];
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <header
       id="home"
-      className="text-white text-center py-20 relative w-full h-screen bg-cover bg-center transition-all duration-1000 ease-in-out"
+      className="text-white text-center py-20 relative w-full h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
       style={{
         backgroundImage: `url('${backgroundImages[currentImageIndex]}')`,
       }}

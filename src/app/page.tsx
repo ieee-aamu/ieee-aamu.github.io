@@ -20,7 +20,7 @@ export default function App() {
       <Navbar />
       {/* Hero Section */}
       <Hero />
-      <main className="container mx-auto mt-10 px-4 pb-16">
+      <main className="container mx-auto px-4 py-16">
         {/* Mission Section */}
         <Mission />
         {/* About Section with Statistics */}

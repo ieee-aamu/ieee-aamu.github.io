@@ -60,7 +60,7 @@ export default function Leadership() {
       <h2 className="text-maroon-700 text-3xl font-semibold mb-6 text-center">
         Meet Our Leadership
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {/* Leadership cards... */}
         {leaders.map((leader) => (
           <div
