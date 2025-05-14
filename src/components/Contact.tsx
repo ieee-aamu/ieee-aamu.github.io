@@ -53,8 +53,8 @@ export default function Contact() {
       id="contact"
       className="bg-maroon-700 text-white rounded-lg shadow-lg p-8"
     >
-      <div className="md:flex md:items-center md:justify-between">
-        <div className="md:w-2/3">
+      <div className="lg:flex md:items-center md:justify-between gap-10">
+        <div className="lg:w-2/3">
           <h2 className="text-3xl font-semibold mb-4">Join IEEE AAMU Today</h2>
           <p className="text-lg mb-6">
             Become a part of our vibrant community and gain access to resources,
@@ -75,7 +75,7 @@ export default function Contact() {
             </li>
           </ul>
         </div>
-        <div className="md:w-1/3 bg-white p-6 rounded-lg text-gray-800">
+        <div className="lg:w-1/3 bg-white p-6 rounded-lg text-gray-800">
           <h3 className="text-xl font-bold text-maroon-700 mb-4">Contact Us</h3>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -91,8 +91,8 @@ export default function Contact() {
               <textarea
                 name="message"
                 placeholder="Message"
-                className="w-full p-2 border border-gray-300 rounded"
-                rows={3}
+                className="w-full p-2 border border-gray-300 rounded resize-none"
+                rows={4}
                 required
               ></textarea>
             </div>

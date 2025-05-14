@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
@@ -14,17 +15,19 @@ export default function Footer() {
             <div
               style={{ width: "100px", height: "100px", overflow: "hidden" }}
             >
-              <img
+              <Image
                 src="images/logo.png"
                 alt="logo"
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                width={100}
+                height={100}
               />
             </div>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-2">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-300">
+              {/* <a href="#" className="hover:text-gray-300" target="_blank">
                 <span className="sr-only">Facebook</span>
                 <svg
                   className="h-6 w-6"
@@ -38,10 +41,11 @@ export default function Footer() {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </a> */}
               <a
                 href="https://www.instagram.com/aamu_ieee/"
                 className="hover:text-gray-300"
+                target="_blank"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
