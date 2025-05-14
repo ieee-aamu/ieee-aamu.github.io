@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Mission() {
   return (
-    <section id="about" className="bg-white shadow-lg rounded-lg p-8 mb-10">
+    <section id="about" className="bg-white shadow-lg rounded-lg p-8 mb-16">
       <h2 className="text-maroon-700 text-3xl font-semibold">Our Mission</h2>
       <p className="mt-4 text-gray-700 leading-relaxed">
         At IEEE (Institute of Electrical and Electronics Engineers) Alabama A &
