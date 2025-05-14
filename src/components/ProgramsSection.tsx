@@ -1,3 +1,4 @@
+"use client";
 // import { useState } from "react";
 // import { Package, Share, Users, Briefcase, Network } from "lucide-react"; // Import relevant icons
 
@@ -61,9 +62,9 @@
 //           <button
 //             key={key}
 //             onClick={() => setActiveProgram(key as keyof typeof programs)}
-//             className="w-48 h-48 flex flex-col items-center justify-center rounded-lg 
-//                        bg-white border-[4px] border-maroon-600 shadow-lg 
-//                        text-maroon-800 font-bold text-lg transition-all duration-300 
+//             className="w-48 h-48 flex flex-col items-center justify-center rounded-lg
+//                        bg-white border-[4px] border-maroon-600 shadow-lg
+//                        text-maroon-800 font-bold text-lg transition-all duration-300
 //                        hover:scale-105 hover:border-yellow-500 hover:shadow-[0_0_20px_4px_rgba(255,215,0,0.6)]"
 //           >
 //             {programs[key as keyof typeof programs].icon}
@@ -109,7 +110,9 @@ import { useState } from "react";
 import { Package, Share, Users, Briefcase, Network } from "lucide-react"; // Import relevant icons
 
 export default function ProgramsSection() {
-  const [activeProgram, setActiveProgram] = useState<keyof typeof programs | null>(null);
+  const [activeProgram, setActiveProgram] = useState<
+    keyof typeof programs | null
+  >(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const programs = {
@@ -117,35 +120,66 @@ export default function ProgramsSection() {
       title: "3D Printing Workshop",
       description:
         "Our 3D Printing Workshop provided participants with hands-on experience in 3D modeling, slicing, and printing. The session introduced attendees to the fundamentals of additive manufacturing, covering both the theoretical and practical aspects of 3D printing technology.",
-      images: ["images/3dprint/3dprint1.jpg", "images/3dprint/3dprint2.jpg", "images/3dprint/3dprint3.jpg", "images/3dprint/3dprint4.jpg"],
+      images: [
+        "images/3dprint/3dprint1.jpg",
+        "images/3dprint/3dprint2.jpg",
+        "images/3dprint/3dprint3.jpg",
+        "images/3dprint/3dprint4.jpg",
+      ],
       icon: <Package className="w-6 h-6 text-maroon-600" />, // Icon for 3D Printing
     },
     ops: {
       title: "IEEE OPS Program",
       description:
         "The Open Project Space Program brings IEEE at UCLA’s successful hardware engineering curriculum to AAMU. Through structured lectures, hands-on projects, and expert mentorship, OPS empowers student organizations to build and sustain impactful engineering programs. With resources for budgeting, event planning, and recruitment, OPS provides everything needed to foster innovation and technical growth",
-      images: ["images/ops/ops1.jpg", "images/ops/ops2.jpg","images/ops/ops3.jpg","images/ops/ops4.jpg","images/ops/ops5.jpg"],
+      images: [
+        "images/ops/ops1.jpg",
+        "images/ops/ops2.jpg",
+        "images/ops/ops3.jpg",
+        "images/ops/ops4.jpg",
+        "images/ops/ops5.jpg",
+      ],
       icon: <Share className="w-6 h-6 text-maroon-600" />, // Icon for OPS Project
     },
     southeastcon: {
       title: "IEEE SoutheastCon",
       description:
         "Our flagship conference where students participate in technical paper competitions, hackathons, and networking events.",
-      images: ["images/sec/sec1.jpg", "images/sec/sec2.jpg", "images/sec/sec3.jpg", "images/sec/sec4.jpg", "images/sec/sec5.jpg"],
+      images: [
+        "images/sec/sec1.jpg",
+        "images/sec/sec2.jpg",
+        "images/sec/sec3.jpg",
+        "images/sec/sec4.jpg",
+        "images/sec/sec5.jpg",
+      ],
       icon: <Users className="w-6 h-6 text-maroon-600" />, // Icon for SoutheastCon
     },
     gbm: {
       title: "General Body Meeting",
       description:
         "Our General Body Meeting (GBM) is held every three weeks to update members on IEEE activities, upcoming events, and opportunities for involvement. It’s a chance to connect with peers, learn about technical projects, and explore leadership roles within IEEE.",
-      images: ["images/gbm/gbm1.jpg", "images/gbm/gbm2.jpg","images/gbm/gbm3.jpg","images/gbm/gbm4.jpg","images/gbm/gbm5.jpg","images/gbm/gbm6.jpg"],
+      images: [
+        "images/gbm/gbm1.jpg",
+        "images/gbm/gbm2.jpg",
+        "images/gbm/gbm3.jpg",
+        "images/gbm/gbm4.jpg",
+        "images/gbm/gbm5.jpg",
+        "images/gbm/gbm6.jpg",
+      ],
       icon: <Briefcase className="w-6 h-6 text-maroon-600" />, // Icon for GBM
     },
     industry: {
       title: "Industry Engagement",
       description:
         "Connect with professionals from top companies, attend guest lectures, and explore career opportunities.",
-      images: ["images/industry/industry1.jpg", "images/industry/industry2.jpg","images/industry/industry3.jpg","images/industry/industry4.jpg","images/industry/industry5.jpg","images/industry/industry6.jpg"],
+      images: [
+        "images/industry/industry1.jpg",
+        "images/industry/industry2.jpg",
+        "images/industry/industry3.jpg",
+        "images/industry/industry4.jpg",
+        "images/industry/industry5.jpg",
+        "images/industry/industry6.jpg",
+      ],
       icon: <Briefcase className="w-6 h-6 text-maroon-600" />, // Icon for Industry Engagement
     },
     networking: {
@@ -165,7 +199,9 @@ export default function ProgramsSection() {
 
   // Function to go to the next image
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % programs[activeProgram!].images.length);
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % programs[activeProgram!].images.length
+    );
   };
 
   // Function to go to the previous image
@@ -179,7 +215,9 @@ export default function ProgramsSection() {
 
   return (
     <section id="events" className="mb-10 text-center">
-      <h2 className="text-maroon-700 text-3xl font-semibold mb-6">Our Programs</h2>
+      <h2 className="text-maroon-700 text-3xl font-semibold mb-6">
+        Our Programs
+      </h2>
 
       {/* Flexbox for Buttons */}
       <div className="flex justify-center items-center space-x-4 flex-wrap">
@@ -193,7 +231,9 @@ export default function ProgramsSection() {
                        hover:scale-105 hover:border-yellow-500 hover:shadow-[0_0_20px_4px_rgba(255,215,0,0.6)]"
           >
             {programs[key as keyof typeof programs].icon}
-            <span className="mt-2 text-sm">{programs[key as keyof typeof programs].title}</span>
+            <span className="mt-2 text-sm">
+              {programs[key as keyof typeof programs].title}
+            </span>
           </button>
         ))}
       </div>
@@ -208,8 +248,12 @@ export default function ProgramsSection() {
             >
               ✖
             </button>
-            <h3 className="text-xl font-bold text-gray-800">{programs[activeProgram].title}</h3>
-            <p className="mt-2 text-gray-600">{programs[activeProgram].description}</p>
+            <h3 className="text-xl font-bold text-gray-800">
+              {programs[activeProgram].title}
+            </h3>
+            <p className="mt-2 text-gray-600">
+              {programs[activeProgram].description}
+            </p>
 
             <div className="mt-4 flex justify-center items-center relative">
               <img
@@ -237,4 +281,3 @@ export default function ProgramsSection() {
     </section>
   );
 }
-
