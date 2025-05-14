@@ -109,7 +109,7 @@
 import { useState } from "react";
 import { Package, Share, Users, Briefcase, Network } from "lucide-react"; // Import relevant icons
 
-export default function ProgramsSection() {
+export default function Programs() {
   const [activeProgram, setActiveProgram] = useState<
     keyof typeof programs | null
   >(null);

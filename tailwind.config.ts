@@ -15,13 +15,12 @@ export default {
           200: "#eebdb8",
           300: "#e2918a",
           400: "#d55e55",
-          500: "#9e3b2d", 
+          500: "#9e3b2d",
           600: "#872e23",
           700: "#6f221b",
           800: "#5a1914",
           900: "#49130f",
         },
-        white: "#ffffff",
       },
       fontFamily: {
         sans: ["Verdana", "Geneva", "Tahoma", "sans-serif"],
@@ -30,4 +29,3 @@ export default {
   },
   plugins: [],
 } satisfies Config;
-
