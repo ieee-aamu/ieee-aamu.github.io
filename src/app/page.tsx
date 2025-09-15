@@ -1,7 +1,7 @@
 import React from "react";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import FlierModal from "@/components/FlierModal";
+// import FlierModal from "@/components/FlierModal";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Leadership from "@/components/Leadership";
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="bg-gray-50">
       {/* Flier Modal */}
-      <FlierModal />
+      {/* <FlierModal /> */}
       {/* Navbar */}
       <Navbar />
       {/* Hero Section */}
