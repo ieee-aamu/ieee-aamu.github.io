@@ -6,52 +6,67 @@ export default function Leadership() {
     {
       name: "Daniel Lambo",
       role: "President",
-      image: "/images/daniel_hs.jpeg",
+      image: "/images/leaders/daniel.jpeg",
     },
     {
       name: "John Adeyemo",
       role: "Vice President",
-      image: "/images/john_hs.JPG",
-    },
-    {
-      name: "Sudeep Joshi",
-      role: "Secretary",
-      image: "/images/sudeep_hs.jpeg",
-    },
-    {
-      name: "Mauyon Wusu",
-      role: "Historian",
-      image: "/images/mauyon_hs.jpg",
+      image: "/images/leaders/john.jpg",
     },
     {
       name: "Ruvarashe Nyabando",
-      role: "Treasurer",
-      image: "/images/ruva_hs.JPG",
+      role: "Director of Special Projects",
+      image: "/images/leaders/ruvarashe.jpg",
     },
     {
-      name: "Ogheneobukome Ejaife",
-      role: "Operational Manager",
-      image: "/images/obukome_hs.jpg",
+      name: "Mauyon Wusu",
+      role: "Secretary",
+      image: "/images/leaders/mauyon.jpg",
+    },
+    {
+      name: "Valencia Ross",
+      role: "Treasurer",
+      image: "/images/leaders/valencia.jpg",
+    },
+    {
+      name: "Bukata Mubanga",
+      role: "Operations Manager",
+      image: "/images/leaders/bukata.jpg",
     },
     {
       name: "Sunday Ochigbo",
-      role: "Technical Manager",
-      image: "/images/sunday_hs.jpg",
+      role: "Technical Project Manager",
+      image: "/images/leaders/sunday.jpg",
     },
     {
-      name: "Kelvin Perkins",
+      name: "Munachimso Arubaleze",
       role: "Membership Coordinator",
-      image: "/images/Kelvin Perkins' Headshot.jpeg",
+      image: "/images/leaders/munachimso.jpg",
     },
     {
-      name: "Haroon Tabassum",
-      role: "Graduate Student Assistant",
-      image: "/images/Haroon.png",
+      name: "Moyinoluwa Adelowo",
+      role: "Webmaster",
+      image: "/images/leaders/moyinoluwa.jpg",
+    },
+    {
+      name: "Riley Roberts",
+      role: "Public Relations Manager",
+      image: "/images/leaders/riley.jpeg",
+    },
+    {
+      name: "Uchenna Justin",
+      role: "Social Media Manager",
+      image: "/images/leaders/uchenna.jpg",
+    },
+    {
+      name: "Nehemiah Edison",
+      role: "Graduate Student Rep",
+      image: "/images/leaders/nehemiah.jpg",
     },
     {
       name: "Dr. Raziq Yaqub",
       role: "Faculty Advisor",
-      image: "/images/dr_yaqub.jpg",
+      image: "/images/leaders/yaqub.jpg",
     },
   ];
 
