@@ -1,43 +1,35 @@
 "use client";
 import React, { useState } from "react";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const upcomingEvents = [
   {
-    date: "20250403",
-    displayDate: "April 10, 2025",
-    startTime: "5:00 PM",
-    endTime: "6:30 PM",
-    startDateTime: "20250320T120000",
-    endDateTime: "20250320T130000",
-    location: "Engineering Building, Room 142",
-    title: "IEEE Open Space Projects Lecture 3",
-    description:
-      "Learn the fundamentals of embedded programming using Arduino.",
-  },
-
-  {
-    date: "20250401/20250430",
-    displayDate: "April 19, 2025",
-    startTime: "11:30AM",
-    endTime: "1:30PM",
-    startDateTime: "20250401T000000",
-    endDateTime: "20250430T235959",
-    location: "Engineering Building, Auditorium",
-    title: "IEEE College Social (AAMU, UAH & UNA)",
-    description:
-      "Join us for a social event to network with other IEEE members.",
-  },
-  {
-    date: "20250405",
-    displayDate: "April 5, 2025",
+    date: "20250919",
+    displayDate: "September 19, 2025",
     startTime: "12:00 PM",
     endTime: "1:00 PM",
-    startDateTime: "20250405T120000",
-    endDateTime: "20250405T130000",
-    location: "Engineering Building, Room 201",
-    title: "IEEE Trivia Night",
-    description: "IEEE trivia night with prizes for the best answers.",
+    startDateTime: "20250919T120000",
+    endDateTime: "20250919T130000",
+    location: "Engineering Building, Room 110",
+    address: "Bond Engineering Building, Normal, AL 35762, USA",
+    title: "Interest Meeting",
+    description:
+      "Come learn about IEEE-AAMU section and how to get involved on campus!",
+  },
+  {
+    date: "20250927",
+    displayDate: "September 27, 2025",
+    startTime: "12:00 PM",
+    endTime: "2:00 PM",
+    startDateTime: "20250927T120000",
+    endDateTime: "20250927T140000",
+    location: "SST Lobby/Courtyard, UAH",
+    address:
+      "Shelby Center for Science and Technology, Huntsville, AL 35805, USA",
+    title: "IEEE Huntsville Section Fall Picnic",
+    description:
+      "Please join the for the Fall Picnic Social for the local IEEE Professionals to mix-n-mingle with the three local IEEE Student Chapters (AAMU, UAH, and UNA).",
   },
 ];
 // Toggle event view function
@@ -53,45 +45,53 @@ const UpcomingEvents = () => {
     ? upcomingEvents
     : upcomingEvents.slice(0, 2);
 
+  console.log(upcomingEvents.length);
+
   return (
-    <section className="bg-white shadow-lg rounded-lg p-8 mb-10">
+    <section id="events" className="bg-white shadow-lg rounded-lg p-8 mb-10">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-maroon-700 text-3xl font-semibold">
           Upcoming Events
         </h2>
-        <button
-          onClick={toggleEventsView}
-          className="text-maroon-700 font-semibold hover:underline transition-all"
-        >
-          {showAllEvents ? "View Less" : "View More"}
-        </button>
+        {upcomingEvents.length > 2 && (
+          <button
+            onClick={toggleEventsView}
+            className="text-maroon-700 font-semibold hover:underline transition-all"
+          >
+            {showAllEvents ? "View Less" : "View More"}
+          </button>
+        )}
       </div>
 
       <div className="space-y-6">
         {displayedEvents.map((event, index) => (
           <div
             key={index}
-            className="border-l-4 border-maroon-700 pl-4 flex flex-wrap gap-5 justify-between items-start"
+            className="border-l-4 border-maroon-700 pl-4 grid lg:grid-cols-[1fr_auto] flex-wrap gap-5 justify-between items-start"
           >
             <div>
-              <div className="flex flex-wrap items-center text-gray-500 mb-1">
-                <Calendar className="h-4 w-4 mr-2" />
-                <span>{event.displayDate}</span>
+              <div className="flex flex-wrap items-center gap-x-2 text-gray-500 mb-1">
+                <span className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>{event.displayDate}</span>
+                </span>
                 {event.startTime !== "All Day" && (
-                  <>
-                    <Clock className="h-4 w-4 ml-4 mr-2" />
+                  <span className="flex items-center">
+                    <Clock className="h-4 w-4 mr-2" />
                     <span>
                       {event.startTime} - {event.endTime}
                     </span>
-                  </>
+                  </span>
                 )}
-                <MapPin className="h-4 w-4 ml-4 mr-2" />
-                <span>{event.location}</span>
+                <span className="flex items-center">
+                  <MapPin className="h-4 w-4 mr-2" />
+                  <span>{event.location}</span>
+                </span>
               </div>
               <h3 className="text-xl font-bold text-gray-800">{event.title}</h3>
               <p className="mt-1 text-gray-600">{event.description}</p>
             </div>
-            <a
+            <Link
               href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
                 event.title
               )}&dates=${event.startDateTime}/${
@@ -99,7 +99,7 @@ const UpcomingEvents = () => {
               }&details=${encodeURIComponent(
                 event.description
               )}&location=${encodeURIComponent(
-                event.location
+                event.address
               )}&sf=true&output=xml`}
               target="_blank"
               rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const UpcomingEvents = () => {
             >
               <Calendar className="h-5 w-5 mr-2 text-maroon-600 transition-all duration-300 group-hover:text-maroon-900" />
               Add to Calendar
-            </a>
+            </Link>
           </div>
         ))}
       </div>
