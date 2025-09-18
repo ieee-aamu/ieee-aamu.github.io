@@ -108,7 +108,7 @@ export default function Programs() {
   };
 
   return (
-    <section id="events" className="mb-20 text-center">
+    <section id="programs" className="mb-20 text-center">
       <h2 className="text-maroon-700 text-3xl font-semibold mb-6">
         Our Programs
       </h2>

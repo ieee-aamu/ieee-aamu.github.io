@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar";
 import Programs from "@/components/Programs";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import WhyJoin from "@/components/WhyJoin";
+import Highlight from "@/components/Highlight";
 
 export default function App() {
   return (
@@ -27,6 +28,8 @@ export default function App() {
         <About />
         {/* Programs Section */}
         <Programs />
+        {/* Highlights Section */}
+        <Highlight />
         {/* Upcoming Events Section */}
         <UpcomingEvents />
         {/* Leadership Section */}
