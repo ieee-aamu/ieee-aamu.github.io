@@ -4,19 +4,19 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const upcomingEvents = [
-  {
-    date: "20250919",
-    displayDate: "September 19, 2025",
-    startTime: "12:00 PM",
-    endTime: "1:00 PM",
-    startDateTime: "20250919T120000",
-    endDateTime: "20250919T130000",
-    location: "Engineering Building, Room 110",
-    address: "Bond Engineering Building, Normal, AL 35762, USA",
-    title: "Interest Meeting",
-    description:
-      "Come learn about IEEE-AAMU section and how to get involved on campus!",
-  },
+  // {
+  //   date: "20250919",
+  //   displayDate: "September 19, 2025",
+  //   startTime: "12:00 PM",
+  //   endTime: "1:00 PM",
+  //   startDateTime: "20250919T120000",
+  //   endDateTime: "20250919T130000",
+  //   location: "Engineering Building, Room 110",
+  //   address: "Bond Engineering Building, Normal, AL 35762, USA",
+  //   title: "Interest Meeting",
+  //   description:
+  //     "Come learn about IEEE-AAMU section and how to get involved on campus!",
+  // },
   {
     date: "20250927",
     displayDate: "September 27, 2025",
