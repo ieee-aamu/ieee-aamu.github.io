@@ -8,7 +8,7 @@ import Leadership from "@/components/Leadership";
 import Mission from "@/components/Mission";
 import Navbar from "@/components/Navbar";
 import Programs from "@/components/Programs";
-import UpcomingEvents from "@/components/UpcomingEvents";
+// import UpcomingEvents from "@/components/UpcomingEvents";
 import WhyJoin from "@/components/WhyJoin";
 import Highlight from "@/components/Highlight";
 
@@ -31,7 +31,7 @@ export default function App() {
         {/* Highlights Section */}
         <Highlight />
         {/* Upcoming Events Section */}
-        <UpcomingEvents />
+        {/* <UpcomingEvents /> */}
         {/* Leadership Section */}
         <Leadership />
         {/* Why Join IEEE Section */}
